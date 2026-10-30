@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blinkit: Grocery delivery in minutes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cart counters: CSS counters add up ADDed products (no JavaScript) -->
+  <div class="cart-counters" aria-hidden="true">
+    <i class="cnt cnt-pharma-1"></i>
+    <i class="cnt cnt-pharma-2"></i>
+    <i class="cnt cnt-pharma-3"></i>
+    <i class="cnt cnt-pharma-4"></i>
+    <i class="cnt cnt-pharma-5"></i>
+    <i class="cnt cnt-pharma-6"></i>
+    <i class="cnt cnt-pharma-7"></i>
+    <i class="cnt cnt-pharma-8"></i>
+    <i class="cnt cnt-pharma-9"></i>
+    <i class="cnt cnt-pharma-10"></i>
+    <i class="cnt cnt-pharma-11"></i>
+    <i class="cnt cnt-pharma-12"></i>
+    <i class="cnt cnt-pet-1"></i>
+    <i class="cnt cnt-pet-2"></i>
+    <i class="cnt cnt-pet-3"></i>
+    <i class="cnt cnt-pet-4"></i>
+    <i class="cnt cnt-pet-5"></i>
+    <i class="cnt cnt-pet-6"></i>
+    <i class="cnt cnt-baby-1"></i>
+    <i class="cnt cnt-baby-2"></i>
+    <i class="cnt cnt-baby-3"></i>
+    <i class="cnt cnt-baby-4"></i>
+    <i class="cnt cnt-baby-5"></i>
+    <i class="cnt cnt-baby-6"></i>
+    <i class="cnt cnt-dairy-1"></i>
+    <i class="cnt cnt-dairy-2"></i>
+    <i class="cnt cnt-dairy-3"></i>
+    <i class="cnt cnt-dairy-4"></i>
+    <i class="cnt cnt-dairy-5"></i>
+    <i class="cnt cnt-dairy-6"></i>
+    <i class="cnt cnt-dairy-7"></i>
+    <i class="cnt cnt-dairy-8"></i>
+    <i class="cnt cnt-dairy-9"></i>
+    <i class="cnt cnt-dairy-10"></i>
+    <i class="cnt cnt-dairy-11"></i>
+    <i class="cnt cnt-dairy-12"></i>
+    <i class="cnt cnt-veg-1"></i>
+    <i class="cnt cnt-veg-2"></i>
+    <i class="cnt cnt-veg-3"></i>
+    <i class="cnt cnt-veg-4"></i>
+    <i class="cnt cnt-veg-5"></i>
+    <i class="cnt cnt-veg-6"></i>
+    <i class="cnt cnt-veg-7"></i>
+    <i class="cnt cnt-veg-8"></i>
+    <i class="cnt cnt-veg-9"></i>
+    <i class="cnt cnt-veg-10"></i>
+    <i class="cnt cnt-veg-11"></i>
+    <i class="cnt cnt-veg-12"></i>
+    <i class="cnt cnt-cold-1"></i>
+    <i class="cnt cnt-cold-2"></i>
+    <i class="cnt cnt-cold-3"></i>
+    <i class="cnt cnt-cold-4"></i>
+    <i class="cnt cnt-cold-5"></i>
+    <i class="cnt cnt-cold-6"></i>
+    <i class="cnt cnt-cold-7"></i>
+    <i class="cnt cnt-cold-8"></i>
+    <i class="cnt cnt-cold-9"></i>
+    <i class="cnt cnt-cold-10"></i>
+    <i class="cnt cnt-cold-11"></i>
+    <i class="cnt cnt-cold-12"></i>
+  </div>
+
+  <!-- ============ 1. HEADER / NAVIGATION ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="logo" href="#" aria-label="Blinkit home">
+        <img src="assets/logo/blinkit-logo.png" alt="blinkit">
+      </a>
+
+      <div class="delivery">
+        <p class="delivery-time">Delivery in 16 minutes</p>
+        <button class="delivery-location" type="button">
+          <span class="delivery-address">XJFQ+CWV, Meerut, Uttar Pradesh</span>
+          <span class="caret" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="search" role="search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input type="text" placeholder='Search "sugar"' aria-label="Search products">
+        <ul class="suggest">
+          <li class="suggest-title">Quick search</li>
+          <li><a href="#pop-pharma">Magnesium supplements</a></li>
+          <li><a href="#pop-pharma">Multivitamin tablets</a></li>
+          <li><a href="#pop-pet-care">Dog food</a></li>
+          <li><a href="#pop-pet-care">Pedigree</a></li>
+          <li><a href="#pop-pharma">Pharma &amp; Wellness</a></li>
+          <li><a href="#pop-pet-care">Pet Care</a></li>
+        </ul>
+      </div>
+
+      <a class="login" href="#">Login</a>
+
+      <a class="cart-btn" href="#cart">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+          <path d="M2 3h3l2.6 12.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"
+                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+          <circle cx="17" cy="20" r="1.4" fill="currentColor"/>
+        </svg>
+        <span>My Cart</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============ 2. MAIN PROMOTIONAL BANNER ============ -->
+    <section class="hero" aria-label="Promotional banner">
+      <div class="hero-text">
+        <h1>Stock up on daily essentials</h1>
+        <p>Get farm-fresh goodness &amp; a range of exotic fruits, vegetables, eggs &amp; more</p>
+        <a class="btn btn-white hero-btn" href="#">Shop Now</a>
+      </div>
+      <img class="hero-img" src="assets/banner/banner-groceries.jpg" alt="Fresh milk, eggs, fruits and vegetables">
+    </section>
+
+    <!-- ============ 3. PROMOTIONAL CARDS ============ -->
+    <section class="promo-grid" aria-label="Offers">
+
+      <article class="promo-card promo-pharmacy">
+        <div class="promo-text">
+          <h2>Pharmacy at<br>your doorstep!</h2>
+          <p>Cough syrups, pain relief sprays &amp; more</p>
+          <a class="btn btn-white" href="#pop-pharma">Order Now</a>
+        </div>
+        <img src="assets/promo/pharmacy.jpg" alt="Pharmacy products">
+      </article>
+
+      <article class="promo-card promo-pet">
+        <div class="promo-text">
+          <h2>Pet care supplies<br>at your door</h2>
+          <p>Food, treats, toys &amp; more</p>
+          <a class="btn btn-dark" href="#pop-pet-care">Order Now</a>
+        </div>
+        <img src="assets/promo/pet-care.jpg" alt="Cat, dog and pet food">
+      </article>
+
+      <article class="promo-card promo-baby">
+        <div class="promo-text">
+          <h2>No time for<br>a diaper run?</h2>
+          <p>Get baby care essentials</p>
+          <a class="btn btn-dark" href="#pop-baby-care">Order Now</a>
+        </div>
+        <img src="assets/promo/baby-care.jpg" alt="Mother with baby">
+      </article>
+
+    </section>
+
+    <!-- ============ 4. PRODUCT CATEGORIES ============ -->
+    <section class="categories" aria-label="Shop by category">
+      <ul class="category-grid">
+        <li><a href="#pop-paan-corner"><img src="assets/categories/paan-corner.jpg" alt=""><span>Paan Corner</span></a></li>
+        <li><a href="#pop-dairy-bread-eggs"><img src="assets/categories/dairy-bread-eggs.jpg" alt=""><span>Dairy, Bread &amp; Eggs</span></a></li>
+        <li><a href="#pop-fruits-vegetables"><img src="assets/categories/fruits-vegetables.jpg" alt=""><span>Fruits &amp; Vegetables</span></a></li>
+        <li><a href="#pop-cold-drinks-juices"><img src="assets/categories/cold-drinks-juices.jpg" alt=""><span>Cold Drinks &amp; Juices</span></a></li>
+        <li><a href="#pop-snacks-munchies"><img src="assets/categories/snacks-munchies.jpg" alt=""><span>Snacks &amp; Munchies</span></a></li>
+        <li><a href="#pop-breakfast-instant-food"><img src="assets/categories/breakfast-instant-food.jpg" alt=""><span>Breakfast &amp; Instant Food</span></a></li>
+        <li><a href="#pop-sweet-tooth"><img src="assets/categories/sweet-tooth.jpg" alt=""><span>Sweet Tooth</span></a></li>
+        <li><a href="#pop-bakery-biscuits"><img src="assets/categories/bakery-biscuits.jpg" alt=""><span>Bakery &amp; Biscuits</span></a></li>
+        <li><a href="#pop-tea-coffee-milk-drinks"><img src="assets/categories/tea-coffee-milk-drinks.jpg" alt=""><span>Tea, Coffee &amp; Milk Drinks</span></a></li>
+        <li><a href="#pop-atta-rice-dal"><img src="assets/categories/atta-rice-dal.jpg" alt=""><span>Atta, Rice &amp; Dal</span></a></li>
+        <li><a href="#pop-masala-oil-more"><img src="assets/categories/masala-oil-more.jpg" alt=""><span>Masala, Oil &amp; More</span></a></li>
+        <li><a href="#pop-sauces-spreads"><img src="assets/categories/sauces-spreads.jpg" alt=""><span>Sauces &amp; Spreads</span></a></li>
+        <li><a href="#pop-chicken-meat-fish"><img src="assets/categories/chicken-meat-fish.jpg" alt=""><span>Chicken, Meat &amp; Fish</span></a></li>
+        <li><a href="#pop-organic-healthy-living"><img src="assets/categories/organic-healthy-living.jpg" alt=""><span>Organic &amp; Healthy Living</span></a></li>
+        <li><a href="#pop-baby-care"><img src="assets/categories/baby-care.jpg" alt=""><span>Baby Care</span></a></li>
+        <li><a href="#pop-pharma"><img src="assets/categories/pharma-wellness.jpg" alt=""><span>Pharma &amp; Wellness</span></a></li>
+        <li><a href="#pop-cleaning-essentials"><img src="assets/categories/cleaning-essentials.jpg" alt=""><span>Cleaning Essentials</span></a></li>
+        <li><a href="#pop-home-office"><img src="assets/categories/home-office.jpg" alt=""><span>Home &amp; Office</span></a></li>
+        <li><a href="#pop-personal-care"><img src="assets/categories/personal-care.jpg" alt=""><span>Personal Care</span></a></li>
+        <li><a href="#pop-pet-care"><img src="assets/categories/pet-care.jpg" alt=""><span>Pet Care</span></a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============ 5. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-links">
+
+      <nav class="useful-links" aria-label="Useful links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Partner</a></li>
+          <li><a href="#">Franchise</a></li>
+          <li><a href="#">Seller</a></li>
+          <li><a href="#">Warehouse</a></li>
+          <li><a href="#">Deliver</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">Bistro</a></li>
+          <li><a href="#">District</a></li>
+          <li><a href="#">Blinkit Ambulance</a></li>
+          <li><a href="#">Feeding India</a></li>
+          <li><a href="#">Eternal SBI Credit Card</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-categories" aria-label="Categories">
+        <h3>Categories <a class="see-all" href="#">see all</a></h3>
+        <ul>
+          <li><a href="#">Bath &amp; Body</a></li>
+          <li><a href="#">Hair</a></li>
+          <li><a href="#">Skin &amp; Face</a></li>
+          <li><a href="#">Beauty &amp; Cosmetics</a></li>
+          <li><a href="#">Feminine Hygiene</a></li>
+          <li><a href="#">Baby Care</a></li>
+          <li><a href="#">Health &amp; Pharma</a></li>
+          <li><a href="#">Sexual Wellness</a></li>
+          <li><a href="#">Vegetables &amp; Fruits</a></li>
+          <li><a href="#">Atta, Rice &amp; Dal</a></li>
+          <li><a href="#">Oil, Ghee &amp; Masala</a></li>
+          <li><a href="#">Dairy, Bread &amp; Eggs</a></li>
+          <li><a href="#">Bakery &amp; Biscuits</a></li>
+          <li><a href="#">Dry Fruits &amp; Cereals</a></li>
+          <li><a href="#">Chicken, Meat &amp; Fish</a></li>
+          <li><a href="#">Kitchenware &amp; Appliances</a></li>
+          <li><a href="#">Chips &amp; Namkeen</a></li>
+          <li><a href="#">Sweets &amp; Chocolates</a></li>
+          <li><a href="#">Drinks &amp; Juices</a></li>
+          <li><a href="#">Tea, Coffee &amp; Milk Drinks</a></li>
+          <li><a href="#">Instant Food</a></li>
+          <li><a href="#">Sauces &amp; Spreads</a></li>
+          <li><a href="#">Paan Corner</a></li>
+          <li><a href="#">Ice Creams &amp; More</a></li>
+          <li><a href="#">Home &amp; Lifestyle</a></li>
+          <li><a href="#">Cleaners &amp; Repellents</a></li>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Stationery &amp; Games</a></li>
+          <li><a href="#">Print Store</a></li>
+          <li><a href="#">E-Gift Cards</a></li>
+          <li><a href="#">Rakhi Gifts</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- Copyright, app badges and social icons -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright">&copy; Blink Commerce Private Limited, 2016-2026</p>
+
+        <div class="app-download">
+          <span class="download-label">Download App</span>
+          <a href="#"><img src="assets/icons/app-store.png" alt="Download on the App Store"></a>
+          <a href="#"><img src="assets/icons/google-play.png" alt="Get it on Google Play"></a>
+        </div>
+
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><img src="assets/icons/facebook.png" alt=""></a></li>
+          <li><a href="#" aria-label="X"><img src="assets/icons/x.png" alt=""></a></li>
+          <li><a href="#" aria-label="Instagram"><img src="assets/icons/instagram.png" alt=""></a></li>
+          <li><a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.png" alt=""></a></li>
+          <li><a href="#" aria-label="Threads"><img src="assets/icons/threads.png" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ POPUPS (CSS-only, opened with :target) ============ -->
+  <section class="popup" id="pop-pharma" aria-label="Pharma &amp; Wellness">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Pharma &amp; Wellness</h3>
+        <div class="popup-actions">
+          <a class="popup-cart" href="#cart">My Cart <span class="cart-n"></span></a>
+          <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+        </div>
+      </header>
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <input class="filter-radio" type="radio" name="f-pharma" id="f-pharma-all" checked>
+        <label class="chip" for="f-pharma-all">All</label>
+        <input class="filter-radio" type="radio" name="f-pharma" id="f-pharma-mag">
+        <label class="chip" for="f-pharma-mag">Magnesium</label>
+        <input class="filter-radio" type="radio" name="f-pharma" id="f-pharma-mv">
+        <label class="chip" for="f-pharma-mv">Multivitamins</label>
+        <input class="filter-radio" type="radio" name="f-pharma" id="f-pharma-other">
+        <label class="chip" for="f-pharma-other">Other supplements</label>
+      </div>
+      <ul class="product-grid">
+        <li class="product t-mag">
+          <span class="off-badge">34%<br>OFF</span>
+          <img src="assets/products/pharma-1.jpg" alt="YouWeFit Magnesium 5X Complex Tablets">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>YouWeFit Magnesium 5X Complex Tablets</h4>
+          <p class="qty">60 tabs</p>
+          <div class="price-row">
+            <div><strong>&#8377;789</strong> <s>&#8377;1,199</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-1">
+              <label class="add-btn" for="add-pharma-1"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mv">
+          <span class="off-badge">28%<br>OFF</span>
+          <img src="assets/products/pharma-2.jpg" alt="Good Monk Healthy 50+ Multivitamin...">
+          <span class="eta">&#9201; 31 MINS</span>
+          <h4>Good Monk Healthy 50+ Multivitamin...</h4>
+          <p class="qty">15 x 2.38 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;299</strong> <s>&#8377;420</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-2">
+              <label class="add-btn" for="add-pharma-2"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mag">
+          <span class="off-badge">29%<br>OFF</span>
+          <img src="assets/products/pharma-3.jpg" alt="Tata 1mg Magnesium Glycinate Advanced...">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>Tata 1mg Magnesium Glycinate Advanced...</h4>
+          <p class="qty">60 tabs</p>
+          <div class="price-row">
+            <div><strong>&#8377;375</strong> <s>&#8377;529</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-3">
+              <label class="add-btn" for="add-pharma-3"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">14%<br>OFF</span>
+          <img src="assets/products/pharma-4.jpg" alt="Ayuvya Magical Sleep Melatonin Effervesce...">
+          <span class="eta">&#9201; 31 MINS</span>
+          <h4>Ayuvya Magical Sleep Melatonin Effervesce...</h4>
+          <p class="qty">30 tabs</p>
+          <div class="price-row">
+            <div><strong>&#8377;299</strong> <s>&#8377;349</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-4">
+              <label class="add-btn" for="add-pharma-4"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">5%<br>OFF</span>
+          <img src="assets/products/pharma-5.jpg" alt="Hk Vitals Collagen Supplement (Orange)">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>Hk Vitals Collagen Supplement (Orange)</h4>
+          <p class="qty">200 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;1,289</strong> <s>&#8377;1,369</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-5">
+              <label class="add-btn" for="add-pharma-5"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">28%<br>OFF</span>
+          <img src="assets/products/pharma-6.jpg" alt="Mylo Lactomama Lactation Supplemen...">
+          <span class="eta">&#9201; 31 MINS</span>
+          <h4>Mylo Lactomama Lactation Supplemen...</h4>
+          <p class="qty">300 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;499</strong> <s>&#8377;699</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-6">
+              <label class="add-btn" for="add-pharma-6"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">20%<br>OFF</span>
+          <img src="assets/products/pharma-7.jpg" alt="Zincovit 1mg Zinc Supplement with...">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>Zincovit 1mg Zinc Supplement with...</h4>
+          <p class="qty">15 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;90</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-7">
+              <label class="add-btn" for="add-pharma-7"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">37%<br>OFF</span>
+          <img src="assets/products/pharma-8.jpg" alt="Nutrabay Pea Plant Protein Isolate">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>Nutrabay Pea Plant Protein Isolate</h4>
+          <p class="qty">1 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;848</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-8">
+              <label class="add-btn" for="add-pharma-8"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mag">
+          <span class="off-badge">33%<br>OFF</span>
+          <img src="assets/products/pharma-9.jpg" alt="Hk Vitals Magnesium Glycinate">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>Hk Vitals Magnesium Glycinate</h4>
+          <p class="qty">60 tabs</p>
+          <div class="price-row">
+            <div><strong>&#8377;429</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-9">
+              <label class="add-btn" for="add-pharma-9"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">30%<br>OFF</span>
+          <img src="assets/products/pharma-10.jpg" alt="Ace Blend 4X Outshine Fish Oil">
+          <span class="eta">&#9201; 31 MINS</span>
+          <h4>Ace Blend 4X Outshine Fish Oil</h4>
+          <p class="qty">60 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;975</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-10">
+              <label class="add-btn" for="add-pharma-10"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mv">
+          <span class="off-badge">11%<br>OFF</span>
+          <img src="assets/products/pharma-11.jpg" alt="Hk Vitals Multivitamin for Men &amp; Women">
+          <span class="eta">&#9201; 9 MINS</span>
+          <h4>Hk Vitals Multivitamin for Men &amp; Women</h4>
+          <p class="qty">60 tabs</p>
+          <div class="price-row">
+            <div><strong>&#8377;399</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-11">
+              <label class="add-btn" for="add-pharma-11"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mag">
+          <span class="off-badge">9%<br>OFF</span>
+          <img src="assets/products/pharma-12.jpg" alt="Ace Blend Max Magnesium for Muscl...">
+          <span class="eta">&#9201; 31 MINS</span>
+          <h4>Ace Blend Max Magnesium for Muscl...</h4>
+          <p class="qty">60 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;799</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pharma-12">
+              <label class="add-btn" for="add-pharma-12"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-pet-care" aria-label="Pet Care">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Pet Care</h3>
+        <div class="popup-actions">
+          <a class="popup-cart" href="#cart">My Cart <span class="cart-n"></span></a>
+          <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+        </div>
+      </header>
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <input class="filter-radio" type="radio" name="f-pet" id="f-pet-all" checked>
+        <label class="chip" for="f-pet-all">All</label>
+        <input class="filter-radio" type="radio" name="f-pet" id="f-pet-drools">
+        <label class="chip" for="f-pet-drools">Drools</label>
+        <input class="filter-radio" type="radio" name="f-pet" id="f-pet-pedigree">
+        <label class="chip" for="f-pet-pedigree">Pedigree</label>
+        <input class="filter-radio" type="radio" name="f-pet" id="f-pet-other">
+        <label class="chip" for="f-pet-other">Other brands</label>
+      </div>
+      <ul class="product-grid">
+        <li class="product t-drools">
+          <span class="off-badge">11%<br>OFF</span>
+          <img src="assets/products/pet-1.jpg" alt="Drools Focus Adult Chicken Premium Dry...">
+          <span class="eta">&#9201; 33 MINS</span>
+          <h4>Drools Focus Adult Chicken Premium Dry...</h4>
+          <p class="qty">1.2 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;660</strong> <s>&#8377;749</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pet-1">
+              <label class="add-btn" for="add-pet-1"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-pedigree">
+          <span class="off-badge">10%<br>OFF</span>
+          <img src="assets/products/pet-2.jpg" alt="Pedigree Adult Dry Dog Food - Chicken &amp;...">
+          <span class="eta">&#9201; 33 MINS</span>
+          <h4>Pedigree Adult Dry Dog Food - Chicken &amp;...</h4>
+          <p class="qty">3 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;657</strong> <s>&#8377;730</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pet-2">
+              <label class="add-btn" for="add-pet-2"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-drools">
+          <span class="off-badge">6%<br>OFF</span>
+          <img src="assets/products/pet-3.jpg" alt="Drools All Life Stages Veggie Dry Dog Food">
+          <span class="eta">&#9201; 16 MINS</span>
+          <h4>Drools All Life Stages Veggie Dry Dog Food</h4>
+          <p class="qty">1.2 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;336</strong> <s>&#8377;360</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pet-3">
+              <label class="add-btn" for="add-pet-3"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-pedigree">
+          <span class="off-badge">20%<br>OFF</span>
+          <img src="assets/products/pet-4.jpg" alt="Pedigree Adult Dry Dog Food - Chicken &amp;...">
+          <span class="eta">&#9201; 16 MINS</span>
+          <h4>Pedigree Adult Dry Dog Food - Chicken &amp;...</h4>
+          <p class="qty">1.2 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;272</strong> <s>&#8377;340</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pet-4">
+              <label class="add-btn" for="add-pet-4"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-drools">
+          <span class="off-badge">9%<br>OFF</span>
+          <img src="assets/products/pet-5.jpg" alt="Drools Optimum Performance Adult Dry...">
+          <span class="eta">&#9201; 33 MINS</span>
+          <h4>Drools Optimum Performance Adult Dry...</h4>
+          <p class="qty">10 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;1,448</strong> <s>&#8377;1,599</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pet-5">
+              <label class="add-btn" for="add-pet-5"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">6%<br>OFF</span>
+          <img src="assets/products/pet-6.jpg" alt="HUFT Sara's Wholesome Classic Chicken &amp; Brow...">
+          <span class="eta">&#9201; 16 MINS</span>
+          <h4>HUFT Sara's Wholesome Classic Chicken &amp; Brow...</h4>
+          <p class="qty">100 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;93</strong> <s>&#8377;99</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-pet-6">
+              <label class="add-btn" for="add-pet-6"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-baby-care" aria-label="Baby Care">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Baby Care</h3>
+        <div class="popup-actions">
+          <a class="popup-cart" href="#cart">My Cart <span class="cart-n"></span></a>
+          <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+        </div>
+      </header>
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <input class="filter-radio" type="radio" name="f-baby" id="f-baby-all" checked>
+        <label class="chip" for="f-baby-all">All</label>
+        <input class="filter-radio" type="radio" name="f-baby" id="f-baby-huggies">
+        <label class="chip" for="f-baby-huggies">Huggies</label>
+        <input class="filter-radio" type="radio" name="f-baby" id="f-baby-mamypoko">
+        <label class="chip" for="f-baby-mamypoko">MamyPoko</label>
+        <input class="filter-radio" type="radio" name="f-baby" id="f-baby-pampers">
+        <label class="chip" for="f-baby-pampers">Pampers</label>
+        <input class="filter-radio" type="radio" name="f-baby" id="f-baby-other">
+        <label class="chip" for="f-baby-other">Other brands</label>
+      </div>
+      <ul class="product-grid">
+        <li class="product t-huggies">
+          <span class="off-badge">27%<br>OFF</span>
+          <img src="assets/products/baby-1.jpg" alt="Huggies Wonder Pants - Pant Style Baby Diaper">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Huggies Wonder Pants - Pant Style Baby Diaper</h4>
+          <p class="qty">24 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;169</strong> <s>&#8377;233</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-baby-1">
+              <label class="add-btn" for="add-baby-1"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-huggies">
+          <span class="off-badge">24%<br>OFF</span>
+          <img src="assets/products/baby-2.jpg" alt="Huggies Comfy Pants - Pant Style Baby Diaper">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Huggies Comfy Pants - Pant Style Baby Diaper</h4>
+          <p class="qty">32 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;296</strong> <s>&#8377;390</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-baby-2">
+              <label class="add-btn" for="add-baby-2"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mamypoko">
+          <span class="off-badge">31%<br>OFF</span>
+          <img src="assets/products/baby-3.jpg" alt="MamyPoko Pants All-Night-Absorb Baby...">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>MamyPoko Pants All-Night-Absorb Baby...</h4>
+          <p class="qty">40 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;409</strong> <s>&#8377;599</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-baby-3">
+              <label class="add-btn" for="add-baby-3"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">47%<br>OFF</span>
+          <img src="assets/products/baby-4.jpg" alt="Teddyy Easy Super Absorbent Baby Diaper">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Teddyy Easy Super Absorbent Baby Diaper</h4>
+          <p class="qty">62 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;499</strong> <s>&#8377;949</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-baby-4">
+              <label class="add-btn" for="add-baby-4"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-pampers">
+          <span class="off-badge">44%<br>OFF</span>
+          <img src="assets/products/baby-5.jpg" alt="Pampers Premium Care Baby Diaper">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Pampers Premium Care Baby Diaper</h4>
+          <p class="qty">44 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;839</strong> <s>&#8377;1,499</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-baby-5">
+              <label class="add-btn" for="add-baby-5"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-mamypoko">
+          <span class="off-badge">31%<br>OFF</span>
+          <img src="assets/products/baby-6.jpg" alt="MamyPoko Pants Premium All Night...">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>MamyPoko Pants Premium All Night...</h4>
+          <p class="qty">46 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;409</strong> <s>&#8377;599</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-baby-6">
+              <label class="add-btn" for="add-baby-6"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-paan-corner" aria-label="Paan Corner">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Paan Corner</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/paan-corner.jpg" alt="Paan Corner">
+        <div>
+          <h4>Paan Corner</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-dairy-bread-eggs" aria-label="Dairy, Bread &amp; Eggs">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Dairy, Bread &amp; Eggs</h3>
+        <div class="popup-actions">
+          <a class="popup-cart" href="#cart">My Cart <span class="cart-n"></span></a>
+          <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+        </div>
+      </header>
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <input class="filter-radio" type="radio" name="f-dairy" id="f-dairy-all" checked>
+        <label class="chip" for="f-dairy-all">All</label>
+        <input class="filter-radio" type="radio" name="f-dairy" id="f-dairy-amul">
+        <label class="chip" for="f-dairy-amul">Amul</label>
+        <input class="filter-radio" type="radio" name="f-dairy" id="f-dairy-motherdairy">
+        <label class="chip" for="f-dairy-motherdairy">Mother Dairy</label>
+        <input class="filter-radio" type="radio" name="f-dairy" id="f-dairy-other">
+        <label class="chip" for="f-dairy-other">Other brands</label>
+      </div>
+      <ul class="product-grid">
+        <li class="product t-amul">
+          <img src="assets/products/dairy-1.jpg" alt="Amul Gold Full Cream Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Gold Full Cream Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;36</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-1">
+              <label class="add-btn" for="add-dairy-1"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-amul">
+          <img src="assets/products/dairy-2.jpg" alt="Amul Taaza Toned Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Taaza Toned Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;30</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-2">
+              <label class="add-btn" for="add-dairy-2"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-amul">
+          <img src="assets/products/dairy-3.jpg" alt="Amul Cow Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Cow Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;31</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-3">
+              <label class="add-btn" for="add-dairy-3"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-amul">
+          <img src="assets/products/dairy-4.jpg" alt="Amul Buffalo A2 Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Buffalo A2 Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;40</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-4">
+              <label class="add-btn" for="add-dairy-4"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-motherdairy">
+          <img src="assets/products/dairy-5.jpg" alt="Mother Dairy Full Cream Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Mother Dairy Full Cream Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;36</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-5">
+              <label class="add-btn" for="add-dairy-5"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-amul">
+          <img src="assets/products/dairy-6.jpg" alt="Amul Moti Toned Milk (90 Days Shelf Life)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Moti Toned Milk (90 Days Shelf Life)</h4>
+          <p class="qty">450 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;33</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-6">
+              <label class="add-btn" for="add-dairy-6"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-amul">
+          <img src="assets/products/dairy-7.jpg" alt="Amul Taaza Toned Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Taaza Toned Milk</h4>
+          <p class="qty">200 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;17</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-7">
+              <label class="add-btn" for="add-dairy-7"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-motherdairy">
+          <img src="assets/products/dairy-8.jpg" alt="Mother Dairy Toned Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Mother Dairy Toned Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;30</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-8">
+              <label class="add-btn" for="add-dairy-8"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-motherdairy">
+          <img src="assets/products/dairy-9.jpg" alt="Mother Dairy Cow Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Mother Dairy Cow Milk</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;31</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-9">
+              <label class="add-btn" for="add-dairy-9"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">5%<br>OFF</span>
+          <img src="assets/products/dairy-10.jpg" alt="Country Delight 25 g High Protein Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Country Delight 25 g High Protein Milk</h4>
+          <p class="qty">450 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;57</strong> <s>&#8377;60</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-10">
+              <label class="add-btn" for="add-dairy-10"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-amul">
+          <img src="assets/products/dairy-11.jpg" alt="Amul Lactose Free Milk">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Amul Lactose Free Milk</h4>
+          <p class="qty">250 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;26</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-11">
+              <label class="add-btn" for="add-dairy-11"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-motherdairy">
+          <img src="assets/products/dairy-12.jpg" alt="Mother Dairy FIT Life Homogenized Double...">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Mother Dairy FIT Life Homogenized Double...</h4>
+          <p class="qty">115 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;10</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-dairy-12">
+              <label class="add-btn" for="add-dairy-12"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-fruits-vegetables" aria-label="Fruits &amp; Vegetables">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Fruits &amp; Vegetables</h3>
+        <div class="popup-actions">
+          <a class="popup-cart" href="#cart">My Cart <span class="cart-n"></span></a>
+          <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+        </div>
+      </header>
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <input class="filter-radio" type="radio" name="f-veg" id="f-veg-all" checked>
+        <label class="chip" for="f-veg-all">All</label>
+        <input class="filter-radio" type="radio" name="f-veg" id="f-veg-vegetables">
+        <label class="chip" for="f-veg-vegetables">Vegetables</label>
+        <input class="filter-radio" type="radio" name="f-veg" id="f-veg-fruits">
+        <label class="chip" for="f-veg-fruits">Fruits</label>
+      </div>
+      <ul class="product-grid">
+        <li class="product t-vegetables">
+          <span class="off-badge">12%<br>OFF</span>
+          <img src="assets/products/veg-1.jpg" alt="Onion (Pyaz)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Onion (Pyaz)</h4>
+          <p class="qty">1 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;66</strong> <s>&#8377;75</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-1">
+              <label class="add-btn" for="add-veg-1"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">12%<br>OFF</span>
+          <img src="assets/products/veg-2.jpg" alt="Green Chilli (Hari Mirch)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Green Chilli (Hari Mirch)</h4>
+          <p class="qty">100 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;14</strong> <s>&#8377;16</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-2">
+              <label class="add-btn" for="add-veg-2"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">15%<br>OFF</span>
+          <img src="assets/products/veg-3.jpg" alt="Coriander Bunch (Dhaniya Patta)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Coriander Bunch (Dhaniya Patta)</h4>
+          <p class="qty">100 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;11</strong> <s>&#8377;13</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-3">
+              <label class="add-btn" for="add-veg-3"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">14%<br>OFF</span>
+          <img src="assets/products/veg-4.jpg" alt="Potato (Aloo)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Potato (Aloo)</h4>
+          <p class="qty">1 kg</p>
+          <div class="price-row">
+            <div><strong>&#8377;24</strong> <s>&#8377;28</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-4">
+              <label class="add-btn" for="add-veg-4"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">21%<br>OFF</span>
+          <img src="assets/products/veg-5.jpg" alt="Orange Carrot (Gajar)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Orange Carrot (Gajar)</h4>
+          <p class="qty">200 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;22</strong> <s>&#8377;28</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-5">
+              <label class="add-btn" for="add-veg-5"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">16%<br>OFF</span>
+          <img src="assets/products/veg-6.jpg" alt="Ginger (Adrak)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Ginger (Adrak)</h4>
+          <p class="qty">200 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;31</strong> <s>&#8377;37</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-6">
+              <label class="add-btn" for="add-veg-6"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">16%<br>OFF</span>
+          <img src="assets/products/veg-7.jpg" alt="Hybrid Tomato (Tamatar)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Hybrid Tomato (Tamatar)</h4>
+          <p class="qty">500 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;20</strong> <s>&#8377;24</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-7">
+              <label class="add-btn" for="add-veg-7"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">17%<br>OFF</span>
+          <img src="assets/products/veg-8.jpg" alt="Desi Tomato (Tamatar)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Desi Tomato (Tamatar)</h4>
+          <p class="qty">500 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;24</strong> <s>&#8377;29</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-8">
+              <label class="add-btn" for="add-veg-8"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">13%<br>OFF</span>
+          <img src="assets/products/veg-9.jpg" alt="Cauliflower (Phool Gobhi)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Cauliflower (Phool Gobhi)</h4>
+          <p class="qty">400 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;19</strong> <s>&#8377;22</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-9">
+              <label class="add-btn" for="add-veg-9"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-fruits">
+          <span class="off-badge">21%<br>OFF</span>
+          <img src="assets/products/veg-10.jpg" alt="Baby Banana">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Baby Banana</h4>
+          <p class="qty">4 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;41</strong> <s>&#8377;52</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-10">
+              <label class="add-btn" for="add-veg-10"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-vegetables">
+          <span class="off-badge">16%<br>OFF</span>
+          <img src="assets/products/veg-11.jpg" alt="Green Cucumber (Kheera)">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Green Cucumber (Kheera)</h4>
+          <p class="qty">500 g</p>
+          <div class="price-row">
+            <div><strong>&#8377;30</strong> <s>&#8377;36</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-11">
+              <label class="add-btn" for="add-veg-11"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-fruits">
+          <span class="off-badge">18%<br>OFF</span>
+          <img src="assets/products/veg-12.jpg" alt="Banana">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Banana</h4>
+          <p class="qty">3 pcs</p>
+          <div class="price-row">
+            <div><strong>&#8377;39</strong> <s>&#8377;48</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-veg-12">
+              <label class="add-btn" for="add-veg-12"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-cold-drinks-juices" aria-label="Cold Drinks &amp; Juices">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Cold Drinks &amp; Juices</h3>
+        <div class="popup-actions">
+          <a class="popup-cart" href="#cart">My Cart <span class="cart-n"></span></a>
+          <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+        </div>
+      </header>
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <input class="filter-radio" type="radio" name="f-cold" id="f-cold-all" checked>
+        <label class="chip" for="f-cold-all">All</label>
+        <input class="filter-radio" type="radio" name="f-cold" id="f-cold-thumsup">
+        <label class="chip" for="f-cold-thumsup">Thums Up</label>
+        <input class="filter-radio" type="radio" name="f-cold" id="f-cold-cocacola">
+        <label class="chip" for="f-cold-cocacola">Coca-Cola</label>
+        <input class="filter-radio" type="radio" name="f-cold" id="f-cold-other">
+        <label class="chip" for="f-cold-other">Other brands</label>
+      </div>
+      <ul class="product-grid">
+        <li class="product t-thumsup">
+          <img src="assets/products/cold-1.jpg" alt="Thums Up X Force Zero Sugar Cola Soft...">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Thums Up X Force Zero Sugar Cola Soft...</h4>
+          <p class="qty">300 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;48</strong> <s>&#8377;50</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-1">
+              <label class="add-btn" for="add-cold-1"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-cocacola">
+          <img src="assets/products/cold-2.jpg" alt="Coca-Cola Diet Coke Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Coca-Cola Diet Coke Soft Drink</h4>
+          <p class="qty">330 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;50</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-2">
+              <label class="add-btn" for="add-cold-2"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-thumsup">
+          <span class="off-badge">5%<br>OFF</span>
+          <img src="assets/products/cold-3.jpg" alt="Thums Up Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Thums Up Soft Drink</h4>
+          <p class="qty">750 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;38</strong> <s>&#8377;40</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-3">
+              <label class="add-btn" for="add-cold-3"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-cocacola">
+          <span class="off-badge">5%<br>OFF</span>
+          <img src="assets/products/cold-4.jpg" alt="Coca-Cola Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Coca-Cola Soft Drink</h4>
+          <p class="qty">750 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;38</strong> <s>&#8377;40</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-4">
+              <label class="add-btn" for="add-cold-4"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-thumsup">
+          <span class="off-badge">8%<br>OFF</span>
+          <img src="assets/products/cold-5.jpg" alt="Thums Up Cola Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Thums Up Cola Soft Drink</h4>
+          <p class="qty">2 ltr</p>
+          <div class="price-row">
+            <div><strong>&#8377;92</strong> <s>&#8377;100</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-5">
+              <label class="add-btn" for="add-cold-5"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">30%<br>OFF</span>
+          <img src="assets/products/cold-6.jpg" alt="Appy Fizz Sparkling Drink (Apple...">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Appy Fizz Sparkling Drink (Apple...</h4>
+          <p class="qty">1 ltr</p>
+          <div class="price-row">
+            <div><strong>&#8377;42</strong> <s>&#8377;60</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-6">
+              <label class="add-btn" for="add-cold-6"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">5%<br>OFF</span>
+          <img src="assets/products/cold-7.jpg" alt="Sprite Lime Flavored Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Sprite Lime Flavored Soft Drink</h4>
+          <p class="qty">750 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;38</strong> <s>&#8377;40</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-7">
+              <label class="add-btn" for="add-cold-7"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-thumsup">
+          <img src="assets/products/cold-8.jpg" alt="Thums Up Cola Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Thums Up Cola Soft Drink</h4>
+          <p class="qty">1 ltr</p>
+          <div class="price-row">
+            <div><strong>&#8377;50</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-8">
+              <label class="add-btn" for="add-cold-8"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-cocacola">
+          <span class="off-badge">6%<br>OFF</span>
+          <img src="assets/products/cold-9.jpg" alt="Coca-Cola Zero Sugar Diets &amp; Lights Soft...">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Coca-Cola Zero Sugar Diets &amp; Lights Soft...</h4>
+          <p class="qty">330 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;47</strong> <s>&#8377;50</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-9">
+              <label class="add-btn" for="add-cold-9"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-cocacola">
+          <span class="off-badge">12%<br>OFF</span>
+          <img src="assets/products/cold-10.jpg" alt="Coca-Cola Zero Sugar Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Coca-Cola Zero Sugar Soft Drink</h4>
+          <p class="qty">750 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;35</strong> <s>&#8377;40</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-10">
+              <label class="add-btn" for="add-cold-10"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <span class="off-badge">5%<br>OFF</span>
+          <img src="assets/products/cold-11.jpg" alt="Limca Lemon 'N' Lime Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Limca Lemon 'N' Lime Soft Drink</h4>
+          <p class="qty">750 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;38</strong> <s>&#8377;40</s></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-11">
+              <label class="add-btn" for="add-cold-11"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+        <li class="product t-other">
+          <img src="assets/products/cold-12.jpg" alt="Campa Cola Soft Drink">
+          <span class="eta">&#9201; 8 MINS</span>
+          <h4>Campa Cola Soft Drink</h4>
+          <p class="qty">500 ml</p>
+          <div class="price-row">
+            <div><strong>&#8377;20</strong></div>
+            <div class="add-wrap">
+              <input class="cart-toggle" type="checkbox" id="add-cold-12">
+              <label class="add-btn" for="add-cold-12"><span class="l-add">ADD</span><span class="l-added">ADDED &#10003;</span></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-snacks-munchies" aria-label="Snacks &amp; Munchies">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Snacks &amp; Munchies</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/snacks-munchies.jpg" alt="Snacks &amp; Munchies">
+        <div>
+          <h4>Snacks &amp; Munchies</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-breakfast-instant-food" aria-label="Breakfast &amp; Instant Food">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Breakfast &amp; Instant Food</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/breakfast-instant-food.jpg" alt="Breakfast &amp; Instant Food">
+        <div>
+          <h4>Breakfast &amp; Instant Food</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-sweet-tooth" aria-label="Sweet Tooth">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Sweet Tooth</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/sweet-tooth.jpg" alt="Sweet Tooth">
+        <div>
+          <h4>Sweet Tooth</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-bakery-biscuits" aria-label="Bakery &amp; Biscuits">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Bakery &amp; Biscuits</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/bakery-biscuits.jpg" alt="Bakery &amp; Biscuits">
+        <div>
+          <h4>Bakery &amp; Biscuits</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-tea-coffee-milk-drinks" aria-label="Tea, Coffee &amp; Milk Drinks">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Tea, Coffee &amp; Milk Drinks</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/tea-coffee-milk-drinks.jpg" alt="Tea, Coffee &amp; Milk Drinks">
+        <div>
+          <h4>Tea, Coffee &amp; Milk Drinks</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-atta-rice-dal" aria-label="Atta, Rice &amp; Dal">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Atta, Rice &amp; Dal</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/atta-rice-dal.jpg" alt="Atta, Rice &amp; Dal">
+        <div>
+          <h4>Atta, Rice &amp; Dal</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-masala-oil-more" aria-label="Masala, Oil &amp; More">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Masala, Oil &amp; More</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/masala-oil-more.jpg" alt="Masala, Oil &amp; More">
+        <div>
+          <h4>Masala, Oil &amp; More</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-sauces-spreads" aria-label="Sauces &amp; Spreads">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Sauces &amp; Spreads</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/sauces-spreads.jpg" alt="Sauces &amp; Spreads">
+        <div>
+          <h4>Sauces &amp; Spreads</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-chicken-meat-fish" aria-label="Chicken, Meat &amp; Fish">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Chicken, Meat &amp; Fish</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/chicken-meat-fish.jpg" alt="Chicken, Meat &amp; Fish">
+        <div>
+          <h4>Chicken, Meat &amp; Fish</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-organic-healthy-living" aria-label="Organic &amp; Healthy Living">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Organic &amp; Healthy Living</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/organic-healthy-living.jpg" alt="Organic &amp; Healthy Living">
+        <div>
+          <h4>Organic &amp; Healthy Living</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-cleaning-essentials" aria-label="Cleaning Essentials">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Cleaning Essentials</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/cleaning-essentials.jpg" alt="Cleaning Essentials">
+        <div>
+          <h4>Cleaning Essentials</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-home-office" aria-label="Home &amp; Office">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Home &amp; Office</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/home-office.jpg" alt="Home &amp; Office">
+        <div>
+          <h4>Home &amp; Office</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="pop-personal-care" aria-label="Personal Care">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel">
+      <header class="popup-head">
+        <h3>Personal Care</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <div class="popup-generic">
+        <img src="assets/categories/personal-care.jpg" alt="Personal Care">
+        <div>
+          <h4>Personal Care</h4>
+          <p>Delivery in 16 minutes</p>
+          <a class="btn btn-green" href="#close">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="popup" id="cart" aria-label="My Cart">
+    <a class="popup-backdrop" href="#close" aria-label="Close"></a>
+    <div class="popup-panel cart-panel">
+      <header class="popup-head">
+        <h3>My Cart</h3>
+        <a class="popup-close" href="#close" aria-label="Close">&times;</a>
+      </header>
+      <p class="cart-empty">Your cart is empty. Open a category and tap ADD on a product.</p>
+      <ul class="cart-list">
+        <li class="ci ci-pharma-1">
+          <img src="assets/products/pharma-1.jpg" alt="">
+          <div class="ci-info"><h4>YouWeFit Magnesium 5X Complex Tablets</h4><p>60 tabs</p></div>
+          <strong>&#8377;789</strong>
+          <label class="ci-remove" for="add-pharma-1">Remove</label>
+        </li>
+        <li class="ci ci-pharma-2">
+          <img src="assets/products/pharma-2.jpg" alt="">
+          <div class="ci-info"><h4>Good Monk Healthy 50+ Multivitamin...</h4><p>15 x 2.38 g</p></div>
+          <strong>&#8377;299</strong>
+          <label class="ci-remove" for="add-pharma-2">Remove</label>
+        </li>
+        <li class="ci ci-pharma-3">
+          <img src="assets/products/pharma-3.jpg" alt="">
+          <div class="ci-info"><h4>Tata 1mg Magnesium Glycinate Advanced...</h4><p>60 tabs</p></div>
+          <strong>&#8377;375</strong>
+          <label class="ci-remove" for="add-pharma-3">Remove</label>
+        </li>
+        <li class="ci ci-pharma-4">
+          <img src="assets/products/pharma-4.jpg" alt="">
+          <div class="ci-info"><h4>Ayuvya Magical Sleep Melatonin Effervesce...</h4><p>30 tabs</p></div>
+          <strong>&#8377;299</strong>
+          <label class="ci-remove" for="add-pharma-4">Remove</label>
+        </li>
+        <li class="ci ci-pharma-5">
+          <img src="assets/products/pharma-5.jpg" alt="">
+          <div class="ci-info"><h4>Hk Vitals Collagen Supplement (Orange)</h4><p>200 g</p></div>
+          <strong>&#8377;1,289</strong>
+          <label class="ci-remove" for="add-pharma-5">Remove</label>
+        </li>
+        <li class="ci ci-pharma-6">
+          <img src="assets/products/pharma-6.jpg" alt="">
+          <div class="ci-info"><h4>Mylo Lactomama Lactation Supplemen...</h4><p>300 g</p></div>
+          <strong>&#8377;499</strong>
+          <label class="ci-remove" for="add-pharma-6">Remove</label>
+        </li>
+        <li class="ci ci-pharma-7">
+          <img src="assets/products/pharma-7.jpg" alt="">
+          <div class="ci-info"><h4>Zincovit 1mg Zinc Supplement with...</h4><p>15 pcs</p></div>
+          <strong>&#8377;90</strong>
+          <label class="ci-remove" for="add-pharma-7">Remove</label>
+        </li>
+        <li class="ci ci-pharma-8">
+          <img src="assets/products/pharma-8.jpg" alt="">
+          <div class="ci-info"><h4>Nutrabay Pea Plant Protein Isolate</h4><p>1 kg</p></div>
+          <strong>&#8377;848</strong>
+          <label class="ci-remove" for="add-pharma-8">Remove</label>
+        </li>
+        <li class="ci ci-pharma-9">
+          <img src="assets/products/pharma-9.jpg" alt="">
+          <div class="ci-info"><h4>Hk Vitals Magnesium Glycinate</h4><p>60 tabs</p></div>
+          <strong>&#8377;429</strong>
+          <label class="ci-remove" for="add-pharma-9">Remove</label>
+        </li>
+        <li class="ci ci-pharma-10">
+          <img src="assets/products/pharma-10.jpg" alt="">
+          <div class="ci-info"><h4>Ace Blend 4X Outshine Fish Oil</h4><p>60 pcs</p></div>
+          <strong>&#8377;975</strong>
+          <label class="ci-remove" for="add-pharma-10">Remove</label>
+        </li>
+        <li class="ci ci-pharma-11">
+          <img src="assets/products/pharma-11.jpg" alt="">
+          <div class="ci-info"><h4>Hk Vitals Multivitamin for Men &amp; Women</h4><p>60 tabs</p></div>
+          <strong>&#8377;399</strong>
+          <label class="ci-remove" for="add-pharma-11">Remove</label>
+        </li>
+        <li class="ci ci-pharma-12">
+          <img src="assets/products/pharma-12.jpg" alt="">
+          <div class="ci-info"><h4>Ace Blend Max Magnesium for Muscl...</h4><p>60 pcs</p></div>
+          <strong>&#8377;799</strong>
+          <label class="ci-remove" for="add-pharma-12">Remove</label>
+        </li>
+        <li class="ci ci-pet-1">
+          <img src="assets/products/pet-1.jpg" alt="">
+          <div class="ci-info"><h4>Drools Focus Adult Chicken Premium Dry...</h4><p>1.2 kg</p></div>
+          <strong>&#8377;660</strong>
+          <label class="ci-remove" for="add-pet-1">Remove</label>
+        </li>
+        <li class="ci ci-pet-2">
+          <img src="assets/products/pet-2.jpg" alt="">
+          <div class="ci-info"><h4>Pedigree Adult Dry Dog Food - Chicken &amp;...</h4><p>3 kg</p></div>
+          <strong>&#8377;657</strong>
+          <label class="ci-remove" for="add-pet-2">Remove</label>
+        </li>
+        <li class="ci ci-pet-3">
+          <img src="assets/products/pet-3.jpg" alt="">
+          <div class="ci-info"><h4>Drools All Life Stages Veggie Dry Dog Food</h4><p>1.2 kg</p></div>
+          <strong>&#8377;336</strong>
+          <label class="ci-remove" for="add-pet-3">Remove</label>
+        </li>
+        <li class="ci ci-pet-4">
+          <img src="assets/products/pet-4.jpg" alt="">
+          <div class="ci-info"><h4>Pedigree Adult Dry Dog Food - Chicken &amp;...</h4><p>1.2 kg</p></div>
+          <strong>&#8377;272</strong>
+          <label class="ci-remove" for="add-pet-4">Remove</label>
+        </li>
+        <li class="ci ci-pet-5">
+          <img src="assets/products/pet-5.jpg" alt="">
+          <div class="ci-info"><h4>Drools Optimum Performance Adult Dry...</h4><p>10 kg</p></div>
+          <strong>&#8377;1,448</strong>
+          <label class="ci-remove" for="add-pet-5">Remove</label>
+        </li>
+        <li class="ci ci-pet-6">
+          <img src="assets/products/pet-6.jpg" alt="">
+          <div class="ci-info"><h4>HUFT Sara's Wholesome Classic Chicken &amp; Brow...</h4><p>100 g</p></div>
+          <strong>&#8377;93</strong>
+          <label class="ci-remove" for="add-pet-6">Remove</label>
+        </li>
+        <li class="ci ci-baby-1">
+          <img src="assets/products/baby-1.jpg" alt="">
+          <div class="ci-info"><h4>Huggies Wonder Pants - Pant Style Baby Diaper</h4><p>24 pcs</p></div>
+          <strong>&#8377;169</strong>
+          <label class="ci-remove" for="add-baby-1">Remove</label>
+        </li>
+        <li class="ci ci-baby-2">
+          <img src="assets/products/baby-2.jpg" alt="">
+          <div class="ci-info"><h4>Huggies Comfy Pants - Pant Style Baby Diaper</h4><p>32 pcs</p></div>
+          <strong>&#8377;296</strong>
+          <label class="ci-remove" for="add-baby-2">Remove</label>
+        </li>
+        <li class="ci ci-baby-3">
+          <img src="assets/products/baby-3.jpg" alt="">
+          <div class="ci-info"><h4>MamyPoko Pants All-Night-Absorb Baby...</h4><p>40 pcs</p></div>
+          <strong>&#8377;409</strong>
+          <label class="ci-remove" for="add-baby-3">Remove</label>
+        </li>
+        <li class="ci ci-baby-4">
+          <img src="assets/products/baby-4.jpg" alt="">
+          <div class="ci-info"><h4>Teddyy Easy Super Absorbent Baby Diaper</h4><p>62 pcs</p></div>
+          <strong>&#8377;499</strong>
+          <label class="ci-remove" for="add-baby-4">Remove</label>
+        </li>
+        <li class="ci ci-baby-5">
+          <img src="assets/products/baby-5.jpg" alt="">
+          <div class="ci-info"><h4>Pampers Premium Care Baby Diaper</h4><p>44 pcs</p></div>
+          <strong>&#8377;839</strong>
+          <label class="ci-remove" for="add-baby-5">Remove</label>
+        </li>
+        <li class="ci ci-baby-6">
+          <img src="assets/products/baby-6.jpg" alt="">
+          <div class="ci-info"><h4>MamyPoko Pants Premium All Night...</h4><p>46 pcs</p></div>
+          <strong>&#8377;409</strong>
+          <label class="ci-remove" for="add-baby-6">Remove</label>
+        </li>
+        <li class="ci ci-dairy-1">
+          <img src="assets/products/dairy-1.jpg" alt="">
+          <div class="ci-info"><h4>Amul Gold Full Cream Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;36</strong>
+          <label class="ci-remove" for="add-dairy-1">Remove</label>
+        </li>
+        <li class="ci ci-dairy-2">
+          <img src="assets/products/dairy-2.jpg" alt="">
+          <div class="ci-info"><h4>Amul Taaza Toned Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;30</strong>
+          <label class="ci-remove" for="add-dairy-2">Remove</label>
+        </li>
+        <li class="ci ci-dairy-3">
+          <img src="assets/products/dairy-3.jpg" alt="">
+          <div class="ci-info"><h4>Amul Cow Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;31</strong>
+          <label class="ci-remove" for="add-dairy-3">Remove</label>
+        </li>
+        <li class="ci ci-dairy-4">
+          <img src="assets/products/dairy-4.jpg" alt="">
+          <div class="ci-info"><h4>Amul Buffalo A2 Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;40</strong>
+          <label class="ci-remove" for="add-dairy-4">Remove</label>
+        </li>
+        <li class="ci ci-dairy-5">
+          <img src="assets/products/dairy-5.jpg" alt="">
+          <div class="ci-info"><h4>Mother Dairy Full Cream Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;36</strong>
+          <label class="ci-remove" for="add-dairy-5">Remove</label>
+        </li>
+        <li class="ci ci-dairy-6">
+          <img src="assets/products/dairy-6.jpg" alt="">
+          <div class="ci-info"><h4>Amul Moti Toned Milk (90 Days Shelf Life)</h4><p>450 ml</p></div>
+          <strong>&#8377;33</strong>
+          <label class="ci-remove" for="add-dairy-6">Remove</label>
+        </li>
+        <li class="ci ci-dairy-7">
+          <img src="assets/products/dairy-7.jpg" alt="">
+          <div class="ci-info"><h4>Amul Taaza Toned Milk</h4><p>200 ml</p></div>
+          <strong>&#8377;17</strong>
+          <label class="ci-remove" for="add-dairy-7">Remove</label>
+        </li>
+        <li class="ci ci-dairy-8">
+          <img src="assets/products/dairy-8.jpg" alt="">
+          <div class="ci-info"><h4>Mother Dairy Toned Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;30</strong>
+          <label class="ci-remove" for="add-dairy-8">Remove</label>
+        </li>
+        <li class="ci ci-dairy-9">
+          <img src="assets/products/dairy-9.jpg" alt="">
+          <div class="ci-info"><h4>Mother Dairy Cow Milk</h4><p>500 ml</p></div>
+          <strong>&#8377;31</strong>
+          <label class="ci-remove" for="add-dairy-9">Remove</label>
+        </li>
+        <li class="ci ci-dairy-10">
+          <img src="assets/products/dairy-10.jpg" alt="">
+          <div class="ci-info"><h4>Country Delight 25 g High Protein Milk</h4><p>450 ml</p></div>
+          <strong>&#8377;57</strong>
+          <label class="ci-remove" for="add-dairy-10">Remove</label>
+        </li>
+        <li class="ci ci-dairy-11">
+          <img src="assets/products/dairy-11.jpg" alt="">
+          <div class="ci-info"><h4>Amul Lactose Free Milk</h4><p>250 ml</p></div>
+          <strong>&#8377;26</strong>
+          <label class="ci-remove" for="add-dairy-11">Remove</label>
+        </li>
+        <li class="ci ci-dairy-12">
+          <img src="assets/products/dairy-12.jpg" alt="">
+          <div class="ci-info"><h4>Mother Dairy FIT Life Homogenized Double...</h4><p>115 ml</p></div>
+          <strong>&#8377;10</strong>
+          <label class="ci-remove" for="add-dairy-12">Remove</label>
+        </li>
+        <li class="ci ci-veg-1">
+          <img src="assets/products/veg-1.jpg" alt="">
+          <div class="ci-info"><h4>Onion (Pyaz)</h4><p>1 kg</p></div>
+          <strong>&#8377;66</strong>
+          <label class="ci-remove" for="add-veg-1">Remove</label>
+        </li>
+        <li class="ci ci-veg-2">
+          <img src="assets/products/veg-2.jpg" alt="">
+          <div class="ci-info"><h4>Green Chilli (Hari Mirch)</h4><p>100 g</p></div>
+          <strong>&#8377;14</strong>
+          <label class="ci-remove" for="add-veg-2">Remove</label>
+        </li>
+        <li class="ci ci-veg-3">
+          <img src="assets/products/veg-3.jpg" alt="">
+          <div class="ci-info"><h4>Coriander Bunch (Dhaniya Patta)</h4><p>100 g</p></div>
+          <strong>&#8377;11</strong>
+          <label class="ci-remove" for="add-veg-3">Remove</label>
+        </li>
+        <li class="ci ci-veg-4">
+          <img src="assets/products/veg-4.jpg" alt="">
+          <div class="ci-info"><h4>Potato (Aloo)</h4><p>1 kg</p></div>
+          <strong>&#8377;24</strong>
+          <label class="ci-remove" for="add-veg-4">Remove</label>
+        </li>
+        <li class="ci ci-veg-5">
+          <img src="assets/products/veg-5.jpg" alt="">
+          <div class="ci-info"><h4>Orange Carrot (Gajar)</h4><p>200 g</p></div>
+          <strong>&#8377;22</strong>
+          <label class="ci-remove" for="add-veg-5">Remove</label>
+        </li>
+        <li class="ci ci-veg-6">
+          <img src="assets/products/veg-6.jpg" alt="">
+          <div class="ci-info"><h4>Ginger (Adrak)</h4><p>200 g</p></div>
+          <strong>&#8377;31</strong>
+          <label class="ci-remove" for="add-veg-6">Remove</label>
+        </li>
+        <li class="ci ci-veg-7">
+          <img src="assets/products/veg-7.jpg" alt="">
+          <div class="ci-info"><h4>Hybrid Tomato (Tamatar)</h4><p>500 g</p></div>
+          <strong>&#8377;20</strong>
+          <label class="ci-remove" for="add-veg-7">Remove</label>
+        </li>
+        <li class="ci ci-veg-8">
+          <img src="assets/products/veg-8.jpg" alt="">
+          <div class="ci-info"><h4>Desi Tomato (Tamatar)</h4><p>500 g</p></div>
+          <strong>&#8377;24</strong>
+          <label class="ci-remove" for="add-veg-8">Remove</label>
+        </li>
+        <li class="ci ci-veg-9">
+          <img src="assets/products/veg-9.jpg" alt="">
+          <div class="ci-info"><h4>Cauliflower (Phool Gobhi)</h4><p>400 g</p></div>
+          <strong>&#8377;19</strong>
+          <label class="ci-remove" for="add-veg-9">Remove</label>
+        </li>
+        <li class="ci ci-veg-10">
+          <img src="assets/products/veg-10.jpg" alt="">
+          <div class="ci-info"><h4>Baby Banana</h4><p>4 pcs</p></div>
+          <strong>&#8377;41</strong>
+          <label class="ci-remove" for="add-veg-10">Remove</label>
+        </li>
+        <li class="ci ci-veg-11">
+          <img src="assets/products/veg-11.jpg" alt="">
+          <div class="ci-info"><h4>Green Cucumber (Kheera)</h4><p>500 g</p></div>
+          <strong>&#8377;30</strong>
+          <label class="ci-remove" for="add-veg-11">Remove</label>
+        </li>
+        <li class="ci ci-veg-12">
+          <img src="assets/products/veg-12.jpg" alt="">
+          <div class="ci-info"><h4>Banana</h4><p>3 pcs</p></div>
+          <strong>&#8377;39</strong>
+          <label class="ci-remove" for="add-veg-12">Remove</label>
+        </li>
+        <li class="ci ci-cold-1">
+          <img src="assets/products/cold-1.jpg" alt="">
+          <div class="ci-info"><h4>Thums Up X Force Zero Sugar Cola Soft...</h4><p>300 ml</p></div>
+          <strong>&#8377;48</strong>
+          <label class="ci-remove" for="add-cold-1">Remove</label>
+        </li>
+        <li class="ci ci-cold-2">
+          <img src="assets/products/cold-2.jpg" alt="">
+          <div class="ci-info"><h4>Coca-Cola Diet Coke Soft Drink</h4><p>330 ml</p></div>
+          <strong>&#8377;50</strong>
+          <label class="ci-remove" for="add-cold-2">Remove</label>
+        </li>
+        <li class="ci ci-cold-3">
+          <img src="assets/products/cold-3.jpg" alt="">
+          <div class="ci-info"><h4>Thums Up Soft Drink</h4><p>750 ml</p></div>
+          <strong>&#8377;38</strong>
+          <label class="ci-remove" for="add-cold-3">Remove</label>
+        </li>
+        <li class="ci ci-cold-4">
+          <img src="assets/products/cold-4.jpg" alt="">
+          <div class="ci-info"><h4>Coca-Cola Soft Drink</h4><p>750 ml</p></div>
+          <strong>&#8377;38</strong>
+          <label class="ci-remove" for="add-cold-4">Remove</label>
+        </li>
+        <li class="ci ci-cold-5">
+          <img src="assets/products/cold-5.jpg" alt="">
+          <div class="ci-info"><h4>Thums Up Cola Soft Drink</h4><p>2 ltr</p></div>
+          <strong>&#8377;92</strong>
+          <label class="ci-remove" for="add-cold-5">Remove</label>
+        </li>
+        <li class="ci ci-cold-6">
+          <img src="assets/products/cold-6.jpg" alt="">
+          <div class="ci-info"><h4>Appy Fizz Sparkling Drink (Apple...</h4><p>1 ltr</p></div>
+          <strong>&#8377;42</strong>
+          <label class="ci-remove" for="add-cold-6">Remove</label>
+        </li>
+        <li class="ci ci-cold-7">
+          <img src="assets/products/cold-7.jpg" alt="">
+          <div class="ci-info"><h4>Sprite Lime Flavored Soft Drink</h4><p>750 ml</p></div>
+          <strong>&#8377;38</strong>
+          <label class="ci-remove" for="add-cold-7">Remove</label>
+        </li>
+        <li class="ci ci-cold-8">
+          <img src="assets/products/cold-8.jpg" alt="">
+          <div class="ci-info"><h4>Thums Up Cola Soft Drink</h4><p>1 ltr</p></div>
+          <strong>&#8377;50</strong>
+          <label class="ci-remove" for="add-cold-8">Remove</label>
+        </li>
+        <li class="ci ci-cold-9">
+          <img src="assets/products/cold-9.jpg" alt="">
+          <div class="ci-info"><h4>Coca-Cola Zero Sugar Diets &amp; Lights Soft...</h4><p>330 ml</p></div>
+          <strong>&#8377;47</strong>
+          <label class="ci-remove" for="add-cold-9">Remove</label>
+        </li>
+        <li class="ci ci-cold-10">
+          <img src="assets/products/cold-10.jpg" alt="">
+          <div class="ci-info"><h4>Coca-Cola Zero Sugar Soft Drink</h4><p>750 ml</p></div>
+          <strong>&#8377;35</strong>
+          <label class="ci-remove" for="add-cold-10">Remove</label>
+        </li>
+        <li class="ci ci-cold-11">
+          <img src="assets/products/cold-11.jpg" alt="">
+          <div class="ci-info"><h4>Limca Lemon 'N' Lime Soft Drink</h4><p>750 ml</p></div>
+          <strong>&#8377;38</strong>
+          <label class="ci-remove" for="add-cold-11">Remove</label>
+        </li>
+        <li class="ci ci-cold-12">
+          <img src="assets/products/cold-12.jpg" alt="">
+          <div class="ci-info"><h4>Campa Cola Soft Drink</h4><p>500 ml</p></div>
+          <strong>&#8377;20</strong>
+          <label class="ci-remove" for="add-cold-12">Remove</label>
+        </li>
+      </ul>
+      <footer class="cart-foot">
+        <span>Items: <b class="cart-n"></b></span>
+        <span>Total: <b class="cart-total"></b></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Floating cart bar (shown by CSS once something is added) -->
+  <a class="cart-bar" href="#cart"><span><b class="cart-n"></b> item(s)</span><span>Total <b class="cart-total"></b> &nbsp;View cart &rsaquo;</span></a>
+
+</body>
+</html>
